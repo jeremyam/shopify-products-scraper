@@ -1,0 +1,8 @@
+{"title":"Shopify Products Scraper input","type":"object","schemaVersion":1,"properties":{
+"startUrls":{"title":"Store or collection URLs","type":"array","editor":"stringList","description":"Shopify store homepages (https://store.com) or collection URLs (https://store.com/collections/sale).","prefill":["https://www.allbirds.com","https://kith.com/collections/mens-footwear"]},
+"maxProductsPerStore":{"title":"Max products per store","type":"integer","minimum":0,"default":0,"description":"0 = all products."},
+"outputMode":{"title":"Output rows","type":"string","editor":"select","enum":["product","variant"],"enumTitles":["One row per product","One row per variant (SKU)"],"default":"product","description":"Per-variant rows include SKU, option values, price and stock status."},
+"onlyOnSale":{"title":"Only discounted items","type":"boolean","default":false,"description":"Keep only products/variants with a compare-at price above the price."},
+"onlyAvailable":{"title":"Only in-stock items","type":"boolean","default":false,"description":"Skip sold-out products/variants."},
+"includeDescription":{"title":"Include description","type":"boolean","default":false,"description":"Adds plain-text product description."}
+},"required":["startUrls"]}

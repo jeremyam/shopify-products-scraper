@@ -1,0 +1,1 @@
+{"actorOutputSchemaVersion":1,"title":"Products output","description":"Shopify products or variants with prices, discounts and stock","properties":{"results":{"type":"string","title":"Products","description":"Shopify products or variants with prices, discounts and stock","template":"{{links.apiDefaultDatasetUrl}}/items?view=overview"}}}

@@ -1,0 +1,45 @@
+{
+ "actorSpecification": 1,
+ "name": "shopify-products-scraper",
+ "title": "Shopify Products & Prices Scraper",
+ "version": "0.1",
+ "buildTag": "latest",
+ "input": "./input_schema.json",
+ "dockerfile": "./Dockerfile",
+ "storages": {
+  "dataset": {
+   "actorSpecification": 1,
+   "views": {
+    "overview": {
+     "title": "Products",
+     "transformation": {
+      "fields": [
+       "image",
+       "title",
+       "vendor",
+       "productType",
+       "priceMin",
+       "priceMax",
+       "compareAtPriceMax",
+       "onSale",
+       "available",
+       "variantCount",
+       "url"
+      ]
+     },
+     "display": {
+      "component": "table",
+      "properties": {
+       "image": {
+        "format": "image"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "output": "./output_schema.json",
+ "minMemoryMbytes": 128,
+ "maxMemoryMbytes": 1024
+}
